@@ -11,3 +11,15 @@
 // hello = true;
 /* -------------------- */
 /* Functions */
+// const getFullName = (name, surname) => {
+//   return name + " " + surname;
+// };
+// console.log(getFullName(true, ['foo']));
+// const getFullName = (name: string, surname: string) => {
+//   return name + " " + surname;
+// };
+// console.log(getFullName("Prince", "Charles"));
+var getFullName = function (name, surname) {
+    return name + " " + surname;
+};
+console.log(getFullName("Prince", "Charles"));
