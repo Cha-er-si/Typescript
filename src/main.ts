@@ -137,3 +137,18 @@
 
 // let pageNumber: string = "1";
 // let numericPageNumber: number = pageNumber as unknown as number;
+
+/* -------------------- */
+/* DOM */
+// let page: any = "1";
+// let pageNumber = page as string;
+
+// const someElement = document.querySelector(".foo") as HTMLInputElement;
+
+// console.log("someElement", someElement);
+// const someElement = document.querySelector(".foo");
+
+// someElement.addEventListener("blur", (event) => {
+//   const target = event.target as HTMLInputElement;
+//   console.log("event", target.value);
+// });
