@@ -86,15 +86,54 @@
 // const popularTags: PopularTag[] = ["dragon", "coffee"];
 /* -------------------- */
 /* Combination of Union and Type Aliases */
-type ID = string;
-type PopularTag = string;
-type MaybePopularTag = PopularTag | null;
-interface UserInterface {
-  id: ID;
-  name: string;
-  surname: string;
-}
+// type ID = string;
+// type PopularTag = string;
+// type MaybePopularTag = PopularTag | null;
+// interface UserInterface {
+//   id: ID;
+//   name: string;
+//   surname: string;
+// }
 
-const popularTags: PopularTag[] = ["dragon", "coffee"];
+// const popularTags: PopularTag[] = ["dragon", "coffee"];
 
-const dragonsTag: MaybePopularTag = "dragon";
+// const dragonsTag: MaybePopularTag = "dragon";
+/* -------------------- */
+/* Void */
+// const doSomething = (): void => {
+//   console.log("doSomething");
+// };
+
+/* -------------------- */
+/* Any */
+// let foo: any = "foo";
+// console.log(foo.bar());
+
+/* -------------------- */
+/* Never */
+// const doSomething = (): never => {
+//   throw "never";
+//   console.log("doSomething");
+// };
+
+/* -------------------- */
+/* Unkown */
+// let vAny: any = 10;
+// let vUnknown: unknown = 10;
+
+// let s1: string = vAny;
+// let s2: string = vUnknown;
+
+// console.log(vAny.foo());
+// console.log(vUnknown.foo());
+
+/* -------------------- */
+/* Type Assertion */
+// let vAny: any = 10;
+// let vUnknown: unknown = 10;
+
+// let s1: string = vAny;
+// let s2: string = vUnknown as string;
+
+// let pageNumber: string = "1";
+// let numericPageNumber: number = pageNumber as unknown as number;
