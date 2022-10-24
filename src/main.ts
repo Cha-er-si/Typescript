@@ -200,12 +200,12 @@
 
 /* -------------------- */
 /* Generics */
-const updatedArray = append<string>("bas", ["foo", "bar"]);
-const searchStr = "foo";
-const _hasSearchedString = any<string>(
-  (el: string) => el.contains(searchStr),
-  ["foooo", "bar", "baz"]
-);
+// const updatedArray = append<string>("bas", ["foo", "bar"]);
+// const searchStr = "foo";
+// const _hasSearchedString = any<string>(
+//   (el: string) => el.contains(searchStr),
+//   ["foooo", "bar", "baz"]
+// );
 const addId = <T extends object>(obj: T) => {
   const id = Math.random().toString(16);
   return {
@@ -228,10 +228,10 @@ const user: UserInterface<{ meta: string }, string> = {
   meta: "bar",
 };
 
-const user: UserInterface<string[]> = {
-  name: "John",
-  data: ["foo", "bar", "baz"],
-};
+// const user: UserInterface<string[]> = {
+//   name: "John",
+//   data: ["foo", "bar", "baz"],
+// };
 
-const result = addId<UserInterface>(user);
-console.log("result", result);
+// const result = addId<UserInterface>(user);
+// console.log("result", result);
