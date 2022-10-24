@@ -206,27 +206,27 @@
 //   (el: string) => el.contains(searchStr),
 //   ["foooo", "bar", "baz"]
 // );
-const addId = <T extends object>(obj: T) => {
-  const id = Math.random().toString(16);
-  return {
-    ...obj,
-    id,
-  };
-};
+// const addId = <T extends object>(obj: T) => {
+//   const id = Math.random().toString(16);
+//   return {
+//     ...obj,
+//     id,
+//   };
+// };
 
-interface UserInterface<T, V> {
-  name: string;
-  data: T;
-  meta: V;
-}
+// interface UserInterface<T, V> {
+//   name: string;
+//   data: T;
+//   meta: V;
+// }
 
-const user: UserInterface<{ meta: string }, string> = {
-  name: "Jack",
-  data: {
-    meta: "foo",
-  },
-  meta: "bar",
-};
+// const user: UserInterface<{ meta: string }, string> = {
+//   name: "Jack",
+//   data: {
+//     meta: "foo",
+//   },
+//   meta: "bar",
+// };
 
 // const user: UserInterface<string[]> = {
 //   name: "John",
@@ -235,3 +235,29 @@ const user: UserInterface<{ meta: string }, string> = {
 
 // const result = addId<UserInterface>(user);
 // console.log("result", result);
+/* -------------------- */
+/* Enums */
+// const statuses = {
+//   notStarted: 0,
+//   inProgess: 1,
+//   done: 2,
+// };
+
+// console.log(statuses.inProgess);
+
+enum StatusEnum {
+  NotStarted = "notStarted",
+  InProgress = "inProgress",
+  Done = "done",
+}
+
+interface Task {
+  id: string;
+  status: StatusEnum;
+}
+
+let notStartedStatus: StatusEnum = StatusEnum.NotStarted;
+
+notStartedStatus = StatusEnum.InProgress;
+
+console.log(notStartedStatus);

@@ -64,17 +64,6 @@
 //   surname: string;
 // }
 // let username: string = "alex";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 // let pagName: string | number = "1";
 // let errorMessage: string | null = null;
 // let user: UserInterface | null = null;
@@ -188,20 +177,45 @@ var __assign = (this && this.__assign) || function () {
 //   (el: string) => el.contains(searchStr),
 //   ["foooo", "bar", "baz"]
 // );
-var addId = function (obj) {
-    var id = Math.random().toString(16);
-    return __assign(__assign({}, obj), { id: id });
-};
-var user = {
-    name: "Jack",
-    data: {
-        meta: "foo"
-    },
-    meta: "bar"
-};
+// const addId = <T extends object>(obj: T) => {
+//   const id = Math.random().toString(16);
+//   return {
+//     ...obj,
+//     id,
+//   };
+// };
+// interface UserInterface<T, V> {
+//   name: string;
+//   data: T;
+//   meta: V;
+// }
+// const user: UserInterface<{ meta: string }, string> = {
+//   name: "Jack",
+//   data: {
+//     meta: "foo",
+//   },
+//   meta: "bar",
+// };
 // const user: UserInterface<string[]> = {
 //   name: "John",
 //   data: ["foo", "bar", "baz"],
 // };
 // const result = addId<UserInterface>(user);
 // console.log("result", result);
+/* -------------------- */
+/* Enums */
+// const statuses = {
+//   notStarted: 0,
+//   inProgess: 1,
+//   done: 2,
+// };
+// console.log(statuses.inProgess);
+var StatusEnum;
+(function (StatusEnum) {
+    StatusEnum["NotStarted"] = "notStarted";
+    StatusEnum["InProgress"] = "inProgress";
+    StatusEnum["Done"] = "done";
+})(StatusEnum || (StatusEnum = {}));
+var notStartedStatus = StatusEnum.NotStarted;
+notStartedStatus = StatusEnum.InProgress;
+console.log(notStartedStatus);
