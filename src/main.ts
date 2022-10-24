@@ -152,3 +152,48 @@
 //   const target = event.target as HTMLInputElement;
 //   console.log("event", target.value);
 // });
+
+/* -------------------- */
+/* Classes */
+// interface UserInterface {
+//   getFullName(): string;
+// }
+// class User implements UserInterface {
+//   private firstName: string;
+//   protected lastName: string;
+//   readonly unchangeableName: string;
+//   static readonly maxAge = 50;
+
+//   constructor(firstName: string, lastName: string) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.unchangeableName = firstName;
+//   }
+
+//   changeUnchangeableName(): void {
+//     // this.unchangeableName = "foo";
+//   }
+
+//   getFullName(): string {
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// class Admin extends User {
+//   private editor: string;
+
+//   setEditor(editor: string): void {
+//     this.editor = editor;
+//   }
+
+//   getEditor(): string {
+//     return this.editor;
+//   }
+// }
+
+// const user = new User("Foo", "lessons");
+// const user1 = new User(true, "lessons");
+// console.log(user.getFullName());
+// console.log(User.maxAge);
+
+// const admin = new Admin("foo", "bar");
