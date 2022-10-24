@@ -57,3 +57,44 @@
 //   },
 // };
 // console.log(user.getMessage());
+/* -------------------- */
+/* Union operator */
+// interface UserInterface {
+//   name: string;
+//   surname: string;
+// }
+// let username: string = "alex";
+
+// let pagName: string | number = "1";
+// let errorMessage: string | null = null;
+
+// let user: UserInterface | null = null;
+
+// //Bad Code
+// let someProp: string | number | null | undefined | string[] | object;
+
+/* -------------------- */
+/* Type Aliases */
+// type ID = string;
+// type PopularTag = string;
+// interface UserInterface {
+//   id: ID;
+//   name: string;
+//   surname: string;
+// }
+
+// const popularTags: PopularTag[] = ["dragon", "coffee"];
+/* -------------------- */
+/* Combination of Union and Type Aliases */
+type ID = string;
+type PopularTag = string;
+type MaybePopularTag = PopularTag | null;
+interface UserInterface {
+  id: ID;
+  name: string;
+  surname: string;
+}
+
+const popularTags: PopularTag[] = ["dragon", "coffee"];
+
+const dragonsTag: MaybePopularTag = "dragon";
